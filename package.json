@@ -1,0 +1,21 @@
+{
+  "name": "airdrop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "airdrop.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node airdrop.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@checkerchain/elrond-merkle-tree-generator": "^1.0.1",
+    "@elrondnetwork/erdjs": "^11.0.0",
+    "@elrondnetwork/erdjs-network-providers": "^1.1.0",
+    "@elrondnetwork/erdjs-walletcore": "^2.0.0",
+    "dotenv": "^16.0.1",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.2.32"
+  }
+}

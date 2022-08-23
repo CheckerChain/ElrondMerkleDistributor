@@ -1,0 +1,14 @@
+wallets/
+
+node_modules/
+
+.env
+
+package-lock.json
+
+contract/airdrop/output
+
+contract/airdrop/wasm
+
+*/target/
+

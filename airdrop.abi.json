@@ -1,0 +1,152 @@
+{
+    "buildInfo": {
+        "rustc": {
+            "version": "1.62.0-nightly",
+            "commitHash": "cb121987158d69bb894ba1bcc21dc45d1e0a488f",
+            "commitDate": "2022-05-08",
+            "channel": "Nightly",
+            "short": "rustc 1.62.0-nightly (cb1219871 2022-05-08)"
+        },
+        "contractCrate": {
+            "name": "airdrop",
+            "version": "0.0.2"
+        },
+        "framework": {
+            "name": "elrond-wasm",
+            "version": "0.29.3"
+        }
+    },
+    "name": "Airdrop",
+    "constructor": {
+        "inputs": [
+            {
+                "name": "vesting",
+                "type": "Address"
+            },
+            {
+                "name": "token_id",
+                "type": "TokenIdentifier"
+            }
+        ],
+        "outputs": []
+    },
+    "endpoints": [
+        {
+            "name": "claim",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "proof",
+                    "type": "List<array32<u8>>"
+                },
+                {
+                    "name": "index",
+                    "type": "BigUint"
+                },
+                {
+                    "name": "amount",
+                    "type": "BigUint"
+                },
+                {
+                    "name": "epoch_number",
+                    "type": "BigUint"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "multi_claim",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "proofs",
+                    "type": "List<List<array32<u8>>>"
+                },
+                {
+                    "name": "indexs",
+                    "type": "List<BigUint>"
+                },
+                {
+                    "name": "amounts",
+                    "type": "List<BigUint>"
+                },
+                {
+                    "name": "epoch_numbers",
+                    "type": "List<BigUint>"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "set_epoch_root",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "epoch_number",
+                    "type": "BigUint"
+                },
+                {
+                    "name": "epoch_root",
+                    "type": "array32<u8>"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "getCheckrTokenId",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "TokenIdentifier"
+                }
+            ]
+        },
+        {
+            "name": "getEpochRoot",
+            "mutability": "readonly",
+            "inputs": [
+                {
+                    "name": "epoch_number",
+                    "type": "BigUint"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "array32<u8>"
+                }
+            ]
+        },
+        {
+            "name": "getClaimStatus",
+            "mutability": "readonly",
+            "inputs": [
+                {
+                    "name": "user",
+                    "type": "Address"
+                },
+                {
+                    "name": "epoch_number",
+                    "type": "BigUint"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "getVestingContract",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "Address"
+                }
+            ]
+        }
+    ],
+    "hasCallback": false,
+    "types": {}
+}
