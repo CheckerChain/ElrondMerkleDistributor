@@ -1,5 +1,14 @@
-# airdrop-smart-contract
+# Airdrop Contract Using Merkle Distributor
 
-# ElrondAirdropTemplate
+### Build:
 
-This code is a template code for the medium article.
+```sh
+erdpy contract build
+```
+
+### Deployment:
+
+```sh
+cd airdrop/interactions/ 
+./snippets.sh
+```
